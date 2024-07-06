@@ -4,6 +4,8 @@ package com.daocao.common.exception;
     自定义的业务异常，当我们的系统出现异常时，返回该异常给前端
  */
 
+import org.springframework.http.HttpStatus;
+
 public class ServiceException extends RuntimeException{
     private static final long serialVersionUID = 1L;
 
@@ -24,7 +26,7 @@ public class ServiceException extends RuntimeException{
     /**
      * 空构造方法，避免反序列化问题
      */
-    public ServiceException() {
+    public ServiceException(HttpStatus unauthorized, String message) {
     }
 
     public ServiceException(String message) {

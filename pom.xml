@@ -4,15 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.stt</groupId>
+    <groupId>com.daocao</groupId>
     <artifactId>daocao_study</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <description>父工程、定义依赖</description>
     <modules>
         <module>daocao_common</module>
         <module>daocao_support</module>
         <module>daocao_auth</module>
         <module>daocao_starter</module>
+        <module>daocao_sys_User</module>
     </modules>
     <!--只定义版本-->
     <packaging>pom</packaging>
@@ -116,6 +117,26 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.daocao</groupId>
+                <artifactId>daocao_support</artifactId>
+                <version>${daocao.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.daocao</groupId>
+                <artifactId>daocao_common</artifactId>
+                <version>${daocao.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.daocao</groupId>
+                <artifactId>daocao_auth</artifactId>
+                <version>${daocao.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.daocao</groupId>
+                <artifactId>daocao_sys_User</artifactId>
+                <version>${daocao.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
